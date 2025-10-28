@@ -14,9 +14,9 @@ import (
 	uuid "github.com/satori/go.uuid"
 	"howett.net/plist"
 
-	"github.com/httprunner/httprunner/v4/hrp/pkg/gidevice/pkg/ipa"
-	"github.com/httprunner/httprunner/v4/hrp/pkg/gidevice/pkg/libimobiledevice"
-	"github.com/httprunner/httprunner/v4/hrp/pkg/gidevice/pkg/nskeyedarchiver"
+	"github.com/sinksmell/httprunner/v4/hrp/pkg/gidevice/pkg/ipa"
+	"github.com/sinksmell/httprunner/v4/hrp/pkg/gidevice/pkg/libimobiledevice"
+	"github.com/sinksmell/httprunner/v4/hrp/pkg/gidevice/pkg/nskeyedarchiver"
 )
 
 const LockdownPort = 62078
@@ -873,7 +873,7 @@ func (d *device) XCTest(bundleID string, opts ...XCTestOption) (out <-chan strin
 		return _out, cancelFunc, err
 	}
 
-	// see https://github.com/httprunner/httprunner/v4/hrp/pkg/gidevice/issues/31
+	// see https://github.com/sinksmell/httprunner/v4/hrp/pkg/gidevice/issues/31
 	// if err = d.instruments.startObserving(pid); err != nil {
 	// 	return _out, cancelFunc, err
 	// }

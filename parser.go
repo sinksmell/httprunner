@@ -1,6 +1,7 @@
 package hrp
 
 import (
+	"context"
 	builtinJSON "encoding/json"
 	"fmt"
 	"net/url"
@@ -13,19 +14,22 @@ import (
 	"github.com/httprunner/funplugin"
 	"github.com/httprunner/funplugin/fungo"
 	"github.com/maja42/goval"
+	"github.com/mark3labs/mcp-go/mcp"
 	"github.com/pkg/errors"
 	"github.com/rs/zerolog/log"
 
-	"github.com/sinksmell/httprunner/v4/hrp/internal/builtin"
-	"github.com/sinksmell/httprunner/v4/hrp/internal/code"
+	"github.com/sinksmell/httprunner/v5/code"
+	"github.com/sinksmell/httprunner/v5/internal/builtin"
+	"github.com/sinksmell/httprunner/v5/mcphost"
 )
 
-func newParser() *Parser {
+func NewParser() *Parser {
 	return &Parser{}
 }
 
 type Parser struct {
-	plugin funplugin.IPlugin // plugin is used to call functions
+	Plugin  funplugin.IPlugin // plugin is used to call functions
+	MCPHost *mcphost.MCPHost
 }
 
 func buildURL(baseURL, stepURL string, queryParams url.Values) (fullUrl *url.URL) {
@@ -45,8 +49,9 @@ func buildURL(baseURL, stepURL string, queryParams url.Values) (fullUrl *url.URL
 			}
 		}
 
+		hadTrailingSlash := strings.HasSuffix(stepURL, "/")
 		// ensure path suffix '/' exists
-		if uStep.RawQuery == "" {
+		if uStep.RawQuery == "" && hadTrailingSlash {
 			uStep.Path = strings.TrimRight(uStep.Path, "/") + "/"
 		}
 
@@ -213,7 +218,7 @@ func (p *Parser) ParseString(raw string, variablesMapping map[string]interface{}
 				return raw, err
 			}
 
-			result, err := p.callFunc(funcName, parsedArgs.([]interface{})...)
+			result, err := p.CallFunc(funcName, parsedArgs.([]interface{})...)
 			if err != nil {
 				log.Error().Str("funcName", funcName).Interface("arguments", arguments).
 					Err(err).Msg("call function failed")
@@ -234,7 +239,7 @@ func (p *Parser) ParseString(raw string, variablesMapping map[string]interface{}
 			log.Debug().
 				Str("parsedString", parsedString).
 				Int("matchStartPosition", matchStartPosition).
-				Msg("[parseString] parse function")
+				Msg("parse string function")
 			continue
 		}
 
@@ -264,7 +269,7 @@ func (p *Parser) ParseString(raw string, variablesMapping map[string]interface{}
 			log.Debug().
 				Str("parsedString", parsedString).
 				Int("matchStartPosition", matchStartPosition).
-				Msg("[parseString] parse variable")
+				Msg("parse string variable")
 			continue
 		}
 
@@ -275,17 +280,17 @@ func (p *Parser) ParseString(raw string, variablesMapping map[string]interface{}
 	return parsedString, nil
 }
 
-// callFunc calls function with arguments
+// CallFunc calls function with arguments
 // only support return at most one result value
-func (p *Parser) callFunc(funcName string, arguments ...interface{}) (interface{}, error) {
+func (p *Parser) CallFunc(funcName string, arguments ...interface{}) (interface{}, error) {
 	// call with plugin function
-	if p.plugin != nil {
-		if p.plugin.Has(funcName) {
-			return p.plugin.Call(funcName, arguments...)
+	if p.Plugin != nil {
+		if p.Plugin.Has(funcName) {
+			return p.Plugin.Call(funcName, arguments...)
 		}
 		commonName := fungo.ConvertCommonName(funcName)
-		if p.plugin.Has(commonName) {
-			return p.plugin.Call(commonName, arguments...)
+		if p.Plugin.Has(commonName) {
+			return p.Plugin.Call(commonName, arguments...)
 		}
 	}
 
@@ -298,6 +303,37 @@ func (p *Parser) callFunc(funcName string, arguments ...interface{}) (interface{
 
 	// call with builtin function
 	return fungo.CallFunc(fn, arguments...)
+}
+
+// CallMCPTool calls a MCP tool on a specific MCP server
+func (p *Parser) CallMCPTool(ctx context.Context, serverName,
+	funcName string, arguments map[string]interface{},
+) (interface{}, error) {
+	if p.MCPHost == nil {
+		return nil, fmt.Errorf("mcphost is not initialized")
+	}
+
+	result, err := p.MCPHost.InvokeTool(ctx, serverName, funcName, arguments)
+	if err != nil {
+		return nil, errors.Wrapf(err, "invoke tool %s/%s failed", serverName, funcName)
+	}
+	if result.IsError {
+		if len(result.Content) > 0 {
+			return nil, fmt.Errorf("invoke tool %s/%s failed: %v",
+				serverName, funcName, result.Content)
+		}
+		return nil, fmt.Errorf("invoke tool %s/%s failed", serverName, funcName)
+	}
+
+	// extract text content
+	var resultText string
+	for _, item := range result.Content {
+		if contentMap, ok := item.(mcp.TextContent); ok {
+			resultText += fmt.Sprintf("%v ", contentMap.Text)
+		}
+	}
+
+	return resultText, nil
 }
 
 // merge two variables mapping, the first variables have higher priority

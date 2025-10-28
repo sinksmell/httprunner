@@ -3,7 +3,7 @@ package gidevice
 import (
 	"log"
 
-	"github.com/httprunner/httprunner/v4/hrp/pkg/gidevice/pkg/libimobiledevice"
+	"github.com/sinksmell/httprunner/v4/hrp/pkg/gidevice/pkg/libimobiledevice"
 )
 
 type PcapOptions struct {

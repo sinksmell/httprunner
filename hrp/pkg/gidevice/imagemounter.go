@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/httprunner/httprunner/v4/hrp/pkg/gidevice/pkg/libimobiledevice"
+	"github.com/sinksmell/httprunner/v4/hrp/pkg/gidevice/pkg/libimobiledevice"
 )
 
 var _ ImageMounter = (*imageMounter)(nil)

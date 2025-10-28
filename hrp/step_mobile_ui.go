@@ -6,9 +6,9 @@ import (
 	"github.com/pkg/errors"
 	"github.com/rs/zerolog/log"
 
-	"github.com/httprunner/httprunner/v4/hrp/internal/code"
-	"github.com/httprunner/httprunner/v4/hrp/internal/sdk"
-	"github.com/httprunner/httprunner/v4/hrp/pkg/uixt"
+	"github.com/sinksmell/httprunner/v4/hrp/internal/code"
+	"github.com/sinksmell/httprunner/v4/hrp/internal/sdk"
+	"github.com/sinksmell/httprunner/v4/hrp/pkg/uixt"
 )
 
 type MobileStep struct {

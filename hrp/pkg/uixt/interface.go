@@ -8,7 +8,7 @@ import (
 
 	"github.com/httprunner/funplugin"
 
-	"github.com/httprunner/httprunner/v4/hrp/internal/builtin"
+	"github.com/sinksmell/httprunner/v4/hrp/internal/builtin"
 )
 
 var (

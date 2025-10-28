@@ -5,8 +5,8 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/httprunner/httprunner/v4/hrp/pkg/gadb"
-	"github.com/httprunner/httprunner/v4/hrp/pkg/uixt"
+	"github.com/sinksmell/httprunner/v4/hrp/pkg/gadb"
+	"github.com/sinksmell/httprunner/v4/hrp/pkg/uixt"
 )
 
 var androidRootCmd = &cobra.Command{

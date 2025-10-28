@@ -10,9 +10,9 @@ import (
 	"github.com/pkg/errors"
 	"github.com/spf13/cobra"
 
-	"github.com/httprunner/httprunner/v4/hrp/internal/sdk"
-	"github.com/httprunner/httprunner/v4/hrp/pkg/gidevice"
-	"github.com/httprunner/httprunner/v4/hrp/pkg/uixt"
+	"github.com/sinksmell/httprunner/v4/hrp/internal/sdk"
+	"github.com/sinksmell/httprunner/v4/hrp/pkg/gidevice"
+	"github.com/sinksmell/httprunner/v4/hrp/pkg/uixt"
 )
 
 type Device struct {

@@ -794,7 +794,7 @@ reference: [v2-changelog]
 [hrp]: https://github.com/httprunner/hrp
 [hashicorp/go-plugin]: https://github.com/hashicorp/go-plugin
 [go plugin]: https://pkg.go.dev/plugin
-[docs repo]: https://github.com/httprunner/httprunner.github.io
+[docs repo]: https://github.com/sinksmell/httprunner.github.io
 [zerolog]: https://github.com/rs/zerolog
 [jmespath]: https://jmespath.org/
 [mkdocs]: https://www.mkdocs.org/
@@ -805,7 +805,7 @@ reference: [v2-changelog]
 [locust]: https://locust.io/
 [black]: https://github.com/psf/black
 [loguru]: https://github.com/Delgan/loguru
-[v2-changelog]: https://github.com/httprunner/httprunner/blob/v2/docs/CHANGELOG.md
+[v2-changelog]: https://github.com/sinksmell/httprunner/blob/v2/docs/CHANGELOG.md
 [WebDriverAgent]: https://github.com/appium/WebDriverAgent
 [uiautomator2]: https://github.com/appium/appium-uiautomator2-server
 [gidevice]: https://github.com/electricbubble/gidevice

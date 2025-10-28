@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/httprunner/httprunner/v4/hrp/pkg/gidevice/pkg/libimobiledevice"
+	"github.com/sinksmell/httprunner/v4/hrp/pkg/gidevice/pkg/libimobiledevice"
 )
 
 var um Usbmux

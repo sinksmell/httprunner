@@ -15,7 +15,7 @@ import (
 
 	"github.com/rs/zerolog/log"
 
-	"github.com/httprunner/httprunner/v4/hrp/pkg/uixt"
+	"github.com/sinksmell/httprunner/v4/hrp/pkg/uixt"
 )
 
 func convertTimeToSeconds(timeStr string) (int, error) {

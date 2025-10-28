@@ -10,7 +10,7 @@ package main
 import (
 	"log"
 
-	"github.com/httprunner/httprunner/v4/hrp/pkg/gidevice"
+	"github.com/sinksmell/httprunner/v4/hrp/pkg/gidevice"
 )
 
 func main() {
@@ -41,7 +41,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/httprunner/httprunner/v4/hrp/pkg/gidevice"
+	"github.com/sinksmell/httprunner/v4/hrp/pkg/gidevice"
 )
 
 type DeviceDetail struct {
@@ -105,7 +105,7 @@ import (
 	"encoding/base64"
 	"log"
 
-	"github.com/httprunner/httprunner/v4/hrp/pkg/gidevice"
+	"github.com/sinksmell/httprunner/v4/hrp/pkg/gidevice"
 )
 
 func main() {
@@ -154,7 +154,7 @@ import (
 	"log"
 	"path/filepath"
 
-	"github.com/httprunner/httprunner/v4/hrp/pkg/gidevice"
+	"github.com/sinksmell/httprunner/v4/hrp/pkg/gidevice"
 )
 
 func main() {
@@ -211,7 +211,7 @@ import (
 	"log"
 	"os"
 
-	"github.com/httprunner/httprunner/v4/hrp/pkg/gidevice"
+	"github.com/sinksmell/httprunner/v4/hrp/pkg/gidevice"
 )
 
 func main() {
@@ -268,7 +268,7 @@ package main
 import (
 	"log"
 
-	"github.com/httprunner/httprunner/v4/hrp/pkg/gidevice"
+	"github.com/sinksmell/httprunner/v4/hrp/pkg/gidevice"
 )
 
 func main() {
@@ -323,7 +323,7 @@ import (
 	"os"
 	"os/signal"
 
-	"github.com/httprunner/httprunner/v4/hrp/pkg/gidevice"
+	"github.com/sinksmell/httprunner/v4/hrp/pkg/gidevice"
 )
 
 func main() {
@@ -380,7 +380,7 @@ import (
 	"time"
 	"syscall"
 
-	"github.com/httprunner/httprunner/v4/hrp/pkg/gidevice"
+	"github.com/sinksmell/httprunner/v4/hrp/pkg/gidevice"
 )
 
 func main() {

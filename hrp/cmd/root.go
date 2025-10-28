@@ -12,10 +12,10 @@ import (
 	"github.com/rs/zerolog/pkgerrors"
 	"github.com/spf13/cobra"
 
-	"github.com/httprunner/httprunner/v4/hrp/cmd/adb"
-	"github.com/httprunner/httprunner/v4/hrp/cmd/ios"
-	"github.com/httprunner/httprunner/v4/hrp/internal/code"
-	"github.com/httprunner/httprunner/v4/hrp/internal/version"
+	"github.com/sinksmell/httprunner/v4/hrp/cmd/adb"
+	"github.com/sinksmell/httprunner/v4/hrp/cmd/ios"
+	"github.com/sinksmell/httprunner/v4/hrp/internal/code"
+	"github.com/sinksmell/httprunner/v4/hrp/internal/version"
 )
 
 // rootCmd represents the base command when called without any subcommands
@@ -36,7 +36,7 @@ monitoring (DEM) test types. Enjoy! ✨ 🚀 ✨
 
 License: Apache-2.0
 Website: https://httprunner.com
-Github: https://github.com/httprunner/httprunner
+Github: https://github.com/sinksmell/httprunner
 Copyright 2017 debugtalk`,
 	PersistentPreRun: func(cmd *cobra.Command, args []string) {
 		initLogger(logLevel, logJSON)

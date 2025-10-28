@@ -11,8 +11,8 @@ import (
 
 	"github.com/mitchellh/mapstructure"
 
-	"github.com/httprunner/httprunner/v4/hrp/internal/json"
-	"github.com/httprunner/httprunner/v4/hrp/pkg/boomer"
+	"github.com/sinksmell/httprunner/v4/hrp/internal/json"
+	"github.com/sinksmell/httprunner/v4/hrp/pkg/boomer"
 )
 
 const jsonContentType = "application/json; encoding=utf-8"

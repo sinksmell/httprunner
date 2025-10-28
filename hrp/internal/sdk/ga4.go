@@ -16,8 +16,8 @@ import (
 	"github.com/rs/zerolog/log"
 	uuid "github.com/satori/go.uuid"
 
-	"github.com/httprunner/httprunner/v4/hrp/internal/env"
-	"github.com/httprunner/httprunner/v4/hrp/internal/version"
+	"github.com/sinksmell/httprunner/v4/hrp/internal/env"
+	"github.com/sinksmell/httprunner/v4/hrp/internal/version"
 )
 
 // Measurement Protocol (Google Analytics 4) docs reference:

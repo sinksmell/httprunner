@@ -6,8 +6,8 @@ import (
 	"github.com/getsentry/sentry-go"
 	"github.com/rs/zerolog/log"
 
-	"github.com/httprunner/httprunner/v4/hrp/internal/env"
-	"github.com/httprunner/httprunner/v4/hrp/internal/version"
+	"github.com/sinksmell/httprunner/v4/hrp/internal/env"
+	"github.com/sinksmell/httprunner/v4/hrp/internal/version"
 )
 
 const (

@@ -7,7 +7,7 @@ readme = "README.md"
 authors = ["debugtalk <debugtalk@gmail.com>"]
 
 homepage = "https://httprunner.com"
-repository = "https://github.com/httprunner/httprunner"
+repository = "https://github.com/sinksmell/httprunner"
 documentation = "https://httprunner.com/docs"
 
 keywords = ["HTTP", "apitest", "perftest", "requests"]

@@ -15,10 +15,10 @@ import (
 	"github.com/pkg/errors"
 	"github.com/rs/zerolog/log"
 
-	"github.com/httprunner/httprunner/v4/hrp/internal/builtin"
-	"github.com/httprunner/httprunner/v4/hrp/internal/code"
-	"github.com/httprunner/httprunner/v4/hrp/internal/env"
-	"github.com/httprunner/httprunner/v4/hrp/internal/json"
+	"github.com/sinksmell/httprunner/v4/hrp/internal/builtin"
+	"github.com/sinksmell/httprunner/v4/hrp/internal/code"
+	"github.com/sinksmell/httprunner/v4/hrp/internal/env"
+	"github.com/sinksmell/httprunner/v4/hrp/internal/json"
 )
 
 var client = &http.Client{

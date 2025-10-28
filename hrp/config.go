@@ -3,8 +3,8 @@ package hrp
 import (
 	"reflect"
 
-	"github.com/httprunner/httprunner/v4/hrp/internal/builtin"
-	"github.com/httprunner/httprunner/v4/hrp/pkg/uixt"
+	"github.com/sinksmell/httprunner/v4/hrp/internal/builtin"
+	"github.com/sinksmell/httprunner/v4/hrp/pkg/uixt"
 )
 
 // NewConfig returns a new constructed testcase config with specified testcase name.

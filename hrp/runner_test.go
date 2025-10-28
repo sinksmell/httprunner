@@ -10,7 +10,7 @@ import (
 	"github.com/rs/zerolog/log"
 	"github.com/stretchr/testify/assert"
 
-	"github.com/httprunner/httprunner/v4/hrp/internal/code"
+	"github.com/sinksmell/httprunner/v4/hrp/internal/code"
 )
 
 func buildHashicorpGoPlugin() {

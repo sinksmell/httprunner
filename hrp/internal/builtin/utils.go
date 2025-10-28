@@ -21,8 +21,8 @@ import (
 	"github.com/rs/zerolog/log"
 	"gopkg.in/yaml.v3"
 
-	"github.com/httprunner/httprunner/v4/hrp/internal/code"
-	"github.com/httprunner/httprunner/v4/hrp/internal/json"
+	"github.com/sinksmell/httprunner/v4/hrp/internal/code"
+	"github.com/sinksmell/httprunner/v4/hrp/internal/json"
 )
 
 func Dump2JSON(data interface{}, path string) error {

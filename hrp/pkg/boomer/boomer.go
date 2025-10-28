@@ -11,7 +11,7 @@ import (
 	"github.com/rs/zerolog/log"
 	"golang.org/x/net/context"
 
-	"github.com/httprunner/httprunner/v4/hrp/internal/json"
+	"github.com/sinksmell/httprunner/v4/hrp/internal/json"
 )
 
 // Mode is the running mode of boomer, both standalone and distributed are supported.

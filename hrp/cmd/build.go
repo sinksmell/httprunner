@@ -6,8 +6,8 @@ import (
 
 	"github.com/spf13/cobra"
 
-	"github.com/httprunner/httprunner/v4/hrp"
-	"github.com/httprunner/httprunner/v4/hrp/internal/sdk"
+	"github.com/sinksmell/httprunner/v4/hrp"
+	"github.com/sinksmell/httprunner/v4/hrp/internal/sdk"
 )
 
 var buildCmd = &cobra.Command{

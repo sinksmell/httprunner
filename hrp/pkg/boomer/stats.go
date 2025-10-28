@@ -4,7 +4,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/httprunner/httprunner/v4/hrp/internal/json"
+	"github.com/sinksmell/httprunner/v4/hrp/internal/json"
 )
 
 type transaction struct {

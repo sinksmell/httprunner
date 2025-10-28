@@ -5,7 +5,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/httprunner/httprunner/v4/hrp/pkg/gadb"
+	"github.com/sinksmell/httprunner/v4/hrp/pkg/gadb"
 )
 
 func main() {

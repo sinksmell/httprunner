@@ -1,4 +1,4 @@
-module github.com/httprunner/httprunner/v4
+module github.com/sinksmell/httprunner/v4
 
 go 1.18
 

@@ -16,7 +16,7 @@ import (
 	"github.com/rs/zerolog/log"
 	uuid "github.com/satori/go.uuid"
 
-	"github.com/httprunner/httprunner/v4/hrp/internal/json"
+	"github.com/sinksmell/httprunner/v4/hrp/internal/json"
 )
 
 // Output is primarily responsible for printing test results to different destinations

@@ -16,7 +16,7 @@ import (
 
 	uuid "github.com/satori/go.uuid"
 
-	"github.com/httprunner/httprunner/v4/hrp/pkg/gidevice/pkg/libimobiledevice"
+	"github.com/sinksmell/httprunner/v4/hrp/pkg/gidevice/pkg/libimobiledevice"
 )
 
 var _ Lockdown = (*lockdown)(nil)

@@ -5,7 +5,7 @@ package tests
 import (
 	"testing"
 
-	"github.com/httprunner/httprunner/v4/hrp"
+	"github.com/sinksmell/httprunner/v4/hrp"
 )
 
 func TestCaseUploadFile(t *testing.T) {

@@ -14,9 +14,9 @@ import (
 	"github.com/pkg/errors"
 	"github.com/rs/zerolog/log"
 
-	"github.com/httprunner/httprunner/v4/hrp/internal/builtin"
-	"github.com/httprunner/httprunner/v4/hrp/internal/json"
-	"github.com/httprunner/httprunner/v4/hrp/pkg/uixt"
+	"github.com/sinksmell/httprunner/v4/hrp/internal/builtin"
+	"github.com/sinksmell/httprunner/v4/hrp/internal/json"
+	"github.com/sinksmell/httprunner/v4/hrp/pkg/uixt"
 )
 
 var fieldTags = []string{"proto", "status_code", "headers", "cookies", "body", textExtractorSubRegexp}

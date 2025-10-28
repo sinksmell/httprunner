@@ -1,8 +1,8 @@
 # HttpRunner
 
-[![Github Actions](https://github.com/httprunner/httprunner/actions/workflows/unittest.yml/badge.svg)](https://github.com/httprunner/httprunner/actions)
+[![Github Actions](https://github.com/sinksmell/httprunner/actions/workflows/unittest.yml/badge.svg)](https://github.com/sinksmell/httprunner/actions)
 [![codecov](https://codecov.io/gh/httprunner/httprunner/branch/master/graph/badge.svg)](https://codecov.io/gh/httprunner/httprunner)
-[![Go Reference](https://pkg.go.dev/badge/github.com/httprunner/httprunner.svg)](https://pkg.go.dev/github.com/httprunner/httprunner)
+[![Go Reference](https://pkg.go.dev/badge/github.com/sinksmell/httprunner.svg)](https://pkg.go.dev/github.com/sinksmell/httprunner)
 [![downloads](https://pepy.tech/badge/httprunner)](https://pepy.tech/project/httprunner)
 [![pypi version](https://img.shields.io/pypi/v/httprunner.svg)](https://pypi.python.org/pypi/httprunner)
 [![pyversions](https://img.shields.io/pypi/pyversions/httprunner.svg)](https://pypi.python.org/pypi/httprunner)
@@ -80,7 +80,7 @@ monitoring (DEM) test types. Enjoy! ✨ 🚀 ✨
 
 License: Apache-2.0
 Website: https://httprunner.com
-Github: https://github.com/httprunner/httprunner
+Github: https://github.com/sinksmell/httprunner
 Copyright 2017 debugtalk
 
 Usage:
@@ -128,7 +128,7 @@ Use "hrp [command] --help" for more information about a command.
 
 <img src="https://httprunner.com/image/qrcode.png" alt="HttpRunner" width="400">
 
-[HttpRunner]: https://github.com/httprunner/httprunner
+[HttpRunner]: https://github.com/sinksmell/httprunner
 [boomer]: https://github.com/myzhan/boomer
 [locust]: https://github.com/locustio/locust
 [jmespath]: https://jmespath.org/

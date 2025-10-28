@@ -18,8 +18,8 @@ import (
 	"google.golang.org/grpc/reflection"
 	"google.golang.org/grpc/status"
 
-	"github.com/httprunner/httprunner/v4/hrp/pkg/boomer/data"
-	"github.com/httprunner/httprunner/v4/hrp/pkg/boomer/grpc/messager"
+	"github.com/sinksmell/httprunner/v4/hrp/pkg/boomer/data"
+	"github.com/sinksmell/httprunner/v4/hrp/pkg/boomer/grpc/messager"
 )
 
 type WorkerNode struct {

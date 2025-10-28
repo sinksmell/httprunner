@@ -17,8 +17,8 @@ import (
 	"google.golang.org/grpc/credentials/oauth"
 	"google.golang.org/grpc/metadata"
 
-	"github.com/httprunner/httprunner/v4/hrp/pkg/boomer/data"
-	"github.com/httprunner/httprunner/v4/hrp/pkg/boomer/grpc/messager"
+	"github.com/sinksmell/httprunner/v4/hrp/pkg/boomer/data"
+	"github.com/sinksmell/httprunner/v4/hrp/pkg/boomer/grpc/messager"
 )
 
 type grpcClient struct {

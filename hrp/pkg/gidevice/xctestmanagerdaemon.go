@@ -3,8 +3,8 @@ package gidevice
 import (
 	"fmt"
 
-	"github.com/httprunner/httprunner/v4/hrp/pkg/gidevice/pkg/libimobiledevice"
-	"github.com/httprunner/httprunner/v4/hrp/pkg/gidevice/pkg/nskeyedarchiver"
+	"github.com/sinksmell/httprunner/v4/hrp/pkg/gidevice/pkg/libimobiledevice"
+	"github.com/sinksmell/httprunner/v4/hrp/pkg/gidevice/pkg/nskeyedarchiver"
 )
 
 var _ XCTestManagerDaemon = (*xcTestManagerDaemon)(nil)
